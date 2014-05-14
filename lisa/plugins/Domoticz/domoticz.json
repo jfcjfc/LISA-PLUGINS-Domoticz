@@ -1,0 +1,36 @@
+{
+    "lang": ["fr", "en"],
+    "name": "domoticz",
+    "author": "jfcjfc",
+    "enabled": 1,
+    "pypi-url": "https://pypi.python.org/pypi/lisa-plugin-Domoticz",
+    "github-url": "https://raw.githubusercontent.com/Seraf/LISA-PLUGINS-Domoticz/master/lisa/plugins/Domoticz/domoticz.json",
+    "version": "0.1.1",
+    "description": [
+        {
+            "lang": "fr",
+            "description": "Ce plugin est celui par défaut intégrant les interactions basiques avec LISA",
+            "wit-instance": "https://wit.ai/Seraf/lisa_fr"
+        },
+        {
+            "lang": "en",
+            "description": "This plugin is shipped by default, managing all basic interactions with LISA",
+            "wit-instance": "https://wit.ai/Seraf/lisa_en"
+        }
+    ],
+    "configuration": {
+        "intents": {
+            "domoticz_time": {
+                "method": "getTime"
+            },
+            "domoticz_hello": {
+                "method": "sayHello"
+            }
+        },
+        "widgets": {
+            "getTime": "lisa.plugins.Domoticz.web.views.widget1"
+        }
+    }
+}
+
+
