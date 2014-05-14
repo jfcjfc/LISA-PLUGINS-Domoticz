@@ -9,13 +9,13 @@ import os,json
 from lisa.server.web.weblisa.utils import method_restricted_to, is_ajax
 from lisa.server.web.weblisa.settings import LISA_PATH
 
-from lisa.plugins.ChatterBot.modules.chatterbot import ChatterBot
+from lisa.plugins.Domoticz.modules.domoticz import Domoticz
 
 # Template system will be fixed with Django 1.7. Each plugin will be able to have his own templates
 @login_required()
 def index(request):
 
-    return render_to_response(os.path.abspath(os.path.dirname(__file__) + '/templates/chatterbot-index.html'),
+    return render_to_response(os.path.abspath(os.path.dirname(__file__) + '/templates/domoticz-index.html'),
                               {
                                   'content': 'test'
                               },

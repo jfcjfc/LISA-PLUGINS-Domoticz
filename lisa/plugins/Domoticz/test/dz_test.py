@@ -38,3 +38,15 @@ class ChatTestCase(unittest.TestCase):
         elif configuration['lang'] == 'en':
             now = datetime.now()
             return self._test(sentence='what time is it', expected=now.strftime("It is %H:%M%p"))
+
+    def test_Asalon(self):
+        if configuration['lang'] == 'en':
+            return self._test(sentence='chat test', expected='chat OK')
+        elif configuration['lang'] == 'fr':
+            return self._test(sentence='Allume salon', expected='jai allumé le salon  ')
+
+    def test_Esalonself):
+        if configuration['lang'] == 'fr':
+            return self._test(sentence='Eteint salon', expected='jai eteint le salon ')
+        elif configuration['lang'] == 'en':
+            return self._test(sentence='what time is it', expected='jai eteint le salon ')

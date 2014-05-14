@@ -5,16 +5,16 @@ from tastypie.utils import trailing_slash
 import json
 from lisa.server.web.weblisa.settings import LISA_PATH
 
-class ChatterBot(object):
+class Domoticz(object):
     def __init__(self):
         return None
 
-class ChatterBotResource(resources.Resource):
+class DomoticzResource(resources.Resource):
     class Meta:
-        resource_name = 'chatterbot'
+        resource_name = 'dooticz'
         allowed_methods = ()
         authorization = authorization.Authorization()
-        object_class = ChatterBot
+        object_class = Domoticz
 
     def base_urls(self):
         return [
