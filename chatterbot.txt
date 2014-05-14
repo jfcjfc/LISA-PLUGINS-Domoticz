@@ -1,0 +1,71 @@
+{
+    "lang": ["fr", "en", "ru"],
+    "name": "ChatterBot",
+    "author": "Julien Syx",
+    "enabled": 1,
+    "pypi-url": "https://pypi.python.org/pypi/lisa-plugin-ChatterBot",
+    "github-url": "https://raw.githubusercontent.com/Seraf/LISA-PLUGINS-ChatterBot/master/lisa/plugins/ChatterBot/chatterbot.json",
+    "version": "0.1.6",
+    "description": [
+        {
+            "lang": "fr",
+            "description": "Ce plugin est celui par défaut intégrant les interactions basiques avec LISA",
+            "wit-instance": "https://wit.ai/Seraf/lisa_fr"
+        },
+        {
+            "lang": "en",
+            "description": "This plugin is shipped by default, managing all basic interactions with LISA",
+            "wit-instance": "https://wit.ai/Seraf/lisa_en"
+        },
+        {
+            "lang": "ru",
+            "description": "Этот плагин поставляется по умолчанию, управляющий все основные взаимодействия с LISA",
+            "wit-instance": "https://wit.ai/Seraf/lisa_ru"
+        }
+    ],
+    "configuration": {
+        "intents": {
+            "chatterbot_time": {
+                "method": "getTime"
+            },
+            "chatterbot_hello": {
+                "method": "sayHello"
+            }
+        },
+        "widgets": {
+            "getTime": "lisa.plugins.ChatterBot.web.views.widget1"
+        }
+    }
+}
+.==
+# -*- coding: UTF-8 -*-
+from datetime import datetime
+from lisa.server.plugins.IPlugin import IPlugin
+import gettext
+import inspect
+import os
+
+class ChatterBot(IPlugin):
+    def __init__(self):
+        super(ChatterBot, self).__init__()
+        self.configuration_plugin = self.mongo.lisa.plugins.find_one({"name": "ChatterBot"})
+        self.path = os.path.realpath(os.path.abspath(os.path.join(os.path.split(
+            inspect.getfile(inspect.currentframe()))[0],os.path.normpath("../lang/"))))
+        self._ = translation = gettext.translation(domain='chatterbot',
+                                                   localedir=self.path,
+                                                   languages=[self.configuration_lisa['lang']]).ugettext
+
+    def getTime(self, jsonInput):
+        now = datetime.now()
+        return {"plugin": "ChatterBot",
+                "method": "getTime",
+                "body": now.strftime(self._('time'))
+        }
+
+    def sayHello(self, jsonInput):
+        return {"plugin": "ChatterBot",
+                "method": "sayHello",
+                "body": self._('Hello. How are you ?')
+        }
+
+
