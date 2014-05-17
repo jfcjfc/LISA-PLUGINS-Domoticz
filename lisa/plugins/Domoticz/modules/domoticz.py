@@ -42,6 +42,16 @@ class Domoticz(IPlugin):
 # entities : wit/location, wit/on_off
 # wit/location = salon, bureau un, bureau deux.
 # wit/location = on, off
+#
+# import requests
+# def switchlight(self, jsonInput):
+#    location = "bureau un"
+#    dict = {"bureau un": 23,
+#     "bureau deux": 25}
+# 
+#    on_off = 'off'
+#    resp = requests.get ('http://127.0.0.1:8080/json.hTwm?type=command&param=switchlight&idx=%02d&switchcmd=%s&level=0' % (dict[location],on_off.capitalize()))
+#
 	if jsonInput['outcome']['entities']['wit/location']['value'] :
 		location = jsonInput['outcome']['entities']['wit/location']['value']
 	else:
