@@ -55,7 +55,7 @@ class Domoticz(IPlugin):
 	if location = "bureau deux" and on_off ="on" :
 		resp = requests.get ('http://127.0.0.1:8080/json.htm?type=command&param=switchlight&idx=xx&switchcmd=On&level=0')
 	elif location = "bureau deux" and on_off ="off" :
-		resp = requests.get ('http://127.0.0.1:8080/json.htm?type=command&param=switchlight&idx=xxswitchcmd=Off&level=0')
+		resp = requests.get ('http://127.0.0.1:8080/json.htm?type=command&param=switchlight&idx=xx&switchcmd=Off&level=0')
 	else:
  		body = self._('probleme trois')
 #
