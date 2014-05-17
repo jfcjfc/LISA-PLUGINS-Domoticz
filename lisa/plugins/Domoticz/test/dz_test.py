@@ -28,7 +28,7 @@ class ChatTestCase(unittest.TestCase):
         if configuration['lang'] == 'en':
             return self._test(sentence='chat test', expected='chat OK')
         elif configuration['lang'] == 'fr':
-            return self._test(sentence='Bonjour', expected='Bonjour. Comment allez vous ?')
+            return self._test(sentence='Bonjour', expected='Bonsoir. Comment allez vous ?')
 
     def test_time(self):
         from datetime import datetime
@@ -43,7 +43,7 @@ class ChatTestCase(unittest.TestCase):
         if configuration['lang'] == 'en':
             return self._test(sentence='chat test', expected='chat OK')
         elif configuration['lang'] == 'fr':
-            return self._test(sentence='Allume salon', expected='jai allumé le salon  ')
+            return self._test(sentence='Allume salon', expected='jai allumï¿½ le salon  ')
 
     def test_Esalonself):
         if configuration['lang'] == 'fr':
