@@ -17,6 +17,13 @@ import inspect
 import os
 import requests
 
+loc_num = {} with open('/dz.txt') as infile:
+for line in infile:
+    loc,num = line.split("*")
+    loc_num[loc] = int(num)
+    print loc_num    
+
+
 
 class Domoticz(IPlugin):
     def __init__(self):
@@ -28,7 +35,6 @@ class Domoticz(IPlugin):
                                                    localedir=self.path,
                                                    languages=[self.configuration_lisa['lang']]).ugettext
 
-    
     def devices(self, jsonInput):
         return {"plugin": "Domoticz",
                 "method": "devices",
@@ -36,18 +42,8 @@ class Domoticz(IPlugin):
         }
 
     def switchlight(self, jsonInput):
-# url6off = 'http://127.0.0.1:8080/json.hTwm?type=command&param=switchlight&idx=6&switchcmd=Off&level=0'
-# /json.htm?type=command&param=switchlight&idx=&switchcmd=&level=0
-# resp = requests.get(url6on, auth=('XXXX','YYYYY'))
-# entities : wit/location, wit/on_off
-# wit/location = salon, bureau un, bureau deux.
-# wit/location = on, off
-#
-# import requests
-# def switchlight(self, jsonInput):
-#    location = "bureau un"
-#    dict = {"bureau un": 23,
-#     "bureau deux": 25}
+
+# def switchlight(self, jsonInput)# url6off = 'http://127.0.0.1:8080/json.hTwm?type=command&param=switchlight&idx=6&switchcmd=Off&level=0'
 # 
 #    on_off = 'off'
 #    resp = requests.get ('http://127.0.0.1:8080/json.hTwm?type=command&param=switchlight&idx=%02d&switchcmd=%s&level=0' % (dict[location],on_off.capitalize()))
