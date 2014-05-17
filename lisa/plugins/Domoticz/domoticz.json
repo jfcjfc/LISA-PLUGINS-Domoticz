@@ -1,4 +1,5 @@
 {
+{
     "lang": ["fr", "en"],
     "name": "domoticz",
     "author": "jfcjfc",
@@ -10,21 +11,24 @@
         {
             "lang": "fr",
             "description": "Ce plugin est celui par défaut intégrant les interactions basiques avec LISA",
-            "wit-instance": "https://wit.ai/Seraf/lisa_fr"
+            "wit-instance": "https://wit.ai/jfcjfc/Dz1"
         },
         {
             "lang": "en",
             "description": "This plugin is shipped by default, managing all basic interactions with LISA",
-            "wit-instance": "https://wit.ai/Seraf/lisa_en"
+            "wit-instance": "https://wit.ai/jfcjfc/Dz1"
         }
     ],
     "configuration": {
         "intents": {
-            "domoticz_time": {
-                "method": "getTime"
+	    "dz_devices": {
+                "method": "devices"
             },
-            "domoticz_hello": {
-                "method": "sayHello"
+            "dz_switchlight": {
+                "method": "switchlight"
+            },
+            "dz_heatingcontrol": {
+                "method": "heatingcontrol"
             }
         },
         "widgets": {
@@ -32,5 +36,4 @@
         }
     }
 }
-
 
