@@ -16,12 +16,10 @@ import gettext
 import inspect
 import os
 import requests
-
-loc_num = {} with open('/dz.txt') as infile:
-for line in infile:
-    loc,num = line.split("*")
-    loc_num[loc] = int(num)
-    print loc_num    
+import json
+ 
+file = open('PathToJson/domoticz_param.json')
+jr = json.load(file)
 
 
 
