@@ -72,7 +72,7 @@
 	    	"boy" : "frisquet haut est sur on"
 	  },{
 	        "ids" : "frisquet haut_off",
-		"meth" : "devices",
+		"meth" : "switchlight",
  	    	"idx" : "66",
 	    	"idx_sec" : "",
 	    	"boy" : "frisquet haut est sur off"
@@ -84,7 +84,7 @@
 	    	"boy" : "la temperature du salon est de %s degre"
 	  },{
 	        "ids" : "batterie salon_",
-		"meth" : "heatingcontrol",
+		"meth" : "devices",
  	    	"idx" : "12",
 	    	"idx_sec" : "battlevel",
 	    	"boy" : "la temperature du salon est de %s degres"
