@@ -31,10 +31,7 @@ class Domoticz(IPlugin):
 		json_data=open('domoticz.json')
 		data = json.load(json_data)
 		res1 = data['param_dz']
-		ipc = data['configuration']
-		inconf = ipc["ip"]
-		pt = ipc["port"]
-
+	
 		if jsonInput['outcome']['entities']['wit/location']['value'] :
 			location = jsonInput['outcome']['entities']['wit/location']['value']
 		else:
@@ -63,10 +60,7 @@ class Domoticz(IPlugin):
 		json_data=open('domoticz2.json')
 		data = json.load(json_data)
 		res1 = data['param_dz']
-		ipc = data['configuration']
-		inconf = ipc["ip"]
-		pt = ipc["port"]
-#
+	#
 		if jsonInput['outcome']['entities']['wit/location']['value'] :
 			location = jsonInput['outcome']['entities']['wit/location']['value']
 		else:
