@@ -71,8 +71,8 @@ class Domoticz(IPlugin):
                         languages=[self.configuration_lisa['lang']]).ugettext
 
 	def devices(self, jsonInput):
-	#	http+config.ip_lan+':'+config.port+lan_path+'?type=devices&filter=temp&used=true&order=Name';
-		# resp = requests.get ('http://192.168.0.3:8080/json.htm?type=devices&filter=temp&used=true&order=Name)
+	#	http://192.168.0.3:8080/json.htm?type=devices&filter=temp&rid=74
+	# parse result : Temp
 		return {"plugin": "Domoticz",
 			"method": "devices",
 			"body": self._(rss(boy))
