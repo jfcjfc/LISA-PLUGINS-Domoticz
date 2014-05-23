@@ -35,13 +35,13 @@ class Domoticz(IPlugin):
 		if jsonInput['outcome']['entities']['wit/location']['value'] :
 			location = jsonInput['outcome']['entities']['wit/location']['value']
 		else:
-			body = self._('pas de lieu')
+			bod = "pas de lieu"
 		
 		
 		if jsonInput['outcome']['entities']['wit/temperature']['value'] :
 			location = jsonInput['outcome']['entities']['wit/temperature']['value']
 		else:
-			body = self._('pas de temperature')
+			bod = "pas de temperature"
 #
 		idex= location + "_" + on_off
 		for rs in res1:
@@ -64,12 +64,12 @@ class Domoticz(IPlugin):
 		if jsonInput['outcome']['entities']['wit/location']['value'] :
 			location = jsonInput['outcome']['entities']['wit/location']['value']
 		else:
-			body = self._('pas de lieu')
+			bod = "pas de lieu"
 
 		if jsonInput['outcome']['entities']['wit/on_off']['value'] :
 			on_off = jsonInput['outcome']['entities']['wit/on_off']['value']
 		else:
-			body = self._('pas de on/off')
+			bod = "pas de on/off"
 #
 		idex= location + "_" + on_off
 		for rs in res1:
