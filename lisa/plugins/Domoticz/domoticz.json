@@ -1,12 +1,11 @@
 {
-{
     "lang": ["fr", "en"],
     "name": "domoticz",
     "author": "jfcjfc",
     "enabled": 1,
     "pypi-url": "https://pypi.python.org/pypi/lisa-plugin-Domoticz",
-    "github-url": "https://raw.githubusercontent.com/Seraf/LISA-PLUGINS-Domoticz/master/lisa/plugins/Domoticz/domoticz.json",
-    "version": "0.1.1",
+    "github-url": "https://XXXraw.githubusercontent.com/Seraf/LISA-PLUGINS-Domoticz/master/lisa/plugins/Domoticz/domoticz.json",
+    "version": "0.3",
     "description": [
         {
             "lang": "fr",
@@ -20,6 +19,8 @@
         }
     ],
     "configuration": {
+	"ip": "192.168.0.3",
+	"port" : "8080",
         "intents": {
 	    "dz_devices": {
                 "method": "devices"
@@ -30,10 +31,68 @@
             "dz_heatingcontrol": {
                 "method": "heatingcontrol"
             }
-        },
+                  }  
+	             },
         "widgets": {
             "getTime": "lisa.plugins.Domoticz.web.views.widget1"
-        }
-    }
+        },
+    "cle_u" : [
+	    {
+	        "ids" : "bureau_un_off", 
+		"meth" : "switchlight",
+ 	   	"idx" : "58",
+	  	"idx_sec" : "",
+	    	"boy" : "la lumiere bureau un est éteinte"
+	  },{
+                "ids" : "bureau_un_on",
+		"meth" : "switchlight",
+ 	    	"idx" : "58",
+	    	"idx_sec" : "",
+	    	"boy" : "la lumiere bureau un est allume"
+	  },{
+                "ids" : "carrillon_on",
+		"meth" : "switchlight",
+ 	    	"idx" : "xx",
+	    	"idx_sec" : "",
+	    	"boy" : "le carillon est actif"
+	  },{
+	        "ids" : "bureau_deux_off",
+		"meth" : "switchlight", 
+ 	    	"idx" : "59",
+	    	"idx_sec" : "",
+	    	"boy" : "la lumiere bureau deux est eteinte"
+	  },{
+	        "ids" : "bureau_deux_on",
+		"meth" : "switchlight", 
+ 	    	"idx" : "59",
+	    	"idx_sec" : "",
+	   	"boy" : "la lumiere bureau deux est allume"
+	 },{
+	        "ids" : "frisquet haut_on",
+		"meth" : "switchlight",
+ 	    	"idx" : "66",
+	    	"idx_sec" : "",
+	    	"boy" : "frisquet haut est sur on"
+	  },{
+	        "ids" : "frisquet haut_off",
+		"meth" : "devices",
+ 	    	"idx" : "66",
+	    	"idx_sec" : "",
+	    	"boy" : "frisquet haut est sur off"
+	  },{
+	        "ids" : "temperature_salon_",
+		"meth" : "devices",
+		"idx" : "12",
+	    	"idx_sec" : "temp",
+	    	"boy" : "la temperature du salon est de %s degre"
+	  },{
+	        "ids" : "batterie salon_",
+		"meth" : "heatingcontrol",
+ 	    	"idx" : "12",
+	    	"idx_sec" : "battlevel",
+	    	"boy" : "la temperature du salon est de %s degres"
+	  }
+	     ]
 }
 
+    
