@@ -3,7 +3,7 @@
 # V0.3 - 140523h1730
 #
 # manque scenario et panel securité
-# manque devices -temp
+# manque devices -temp, batterie, humidité
 # doit marcher et a tester on/off - switch et HC 
 # param à faire ip et port
 #
