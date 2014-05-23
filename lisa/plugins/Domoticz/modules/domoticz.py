@@ -72,7 +72,7 @@ class Domoticz(IPlugin):
 
 	def devices(self, jsonInput):
 	#	http://192.168.0.3:8080/json.htm?type=devices&filter=temp&rid=74
-	# parse result : Temp
+	# parse result : Temp, conso, lowbat ou battery level,,humidity
 		return {"plugin": "Domoticz",
 			"method": "devices",
 			"body": self._(rss(boy))
