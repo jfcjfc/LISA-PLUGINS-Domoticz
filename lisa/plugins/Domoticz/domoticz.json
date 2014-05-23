@@ -28,10 +28,7 @@
             "dz_switchlight": {
                 "method": "switchlight"
             },
-            "dz_heatingcontrol": {
-                "method": "heatingcontrol"
-            }
-                  }  
+                   }  
 	             },
         "widgets": {
             "getTime": "lisa.plugins.Domoticz.web.views.widget1"
