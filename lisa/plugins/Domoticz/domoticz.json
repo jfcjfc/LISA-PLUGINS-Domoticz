@@ -9,7 +9,7 @@
     "description": [
         {
             "lang": "fr",
-            "description": "Ce plugin est celui par défaut intégrant les interactions basiques avec LISA",
+            "description": "Ce plugin est celui par défaut intégrant les interactions domoticz avec LISA",
             "wit-instance": "https://wit.ai/jfcjfc/Dz1"
         },
         {
