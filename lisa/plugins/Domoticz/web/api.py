@@ -11,7 +11,7 @@ class Domoticz(object):
 
 class DomoticzResource(resources.Resource):
     class Meta:
-        resource_name = 'dooticz'
+        resource_name = 'domoticz'
         allowed_methods = ()
         authorization = authorization.Authorization()
         object_class = Domoticz
