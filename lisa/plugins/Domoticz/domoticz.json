@@ -4,12 +4,12 @@
     "author": "jfcjfc",
     "enabled": 1,
     "pypi-url": "https://pypi.python.org/pypi/lisa-plugin-Domoticz",
-    "github-url": "https://XXXXraw.githubusercontent.com/Seraf/LISA-PLUGINS-Domoticz/master/lisa/plugins/Domoticz/domoticz.json",
-    "version": "0.3",
+    "github-url": "https://XXXraw.githubusercontent.com/Seraf/LISA-PLUGINS-Domoticz/master/lisa/plugins/Domoticz/domoticz.json",
+    "version": "0.153",
     "description": [
         {
             "lang": "fr",
-            "description": "Ce plugin est celui par défaut intégrant les interactions domoticz avec LISA",
+            "description": "Ce plugin est celui par défaut intégrant les interactions basiques avec LISA",
             "wit-instance": "https://wit.ai/jfcjfc/Dz1"
         },
         {
@@ -19,21 +19,24 @@
         }
     ],
     "configuration": {
-	"ip": "192.168.0.3",
-	"port" : "8080",
-        "intents": {
+	 "ip": "192.168.0.3",
+	 "port" : "8080",
+         "intents": {
 	    "dz_devices": {
                 "method": "devices"
             },
             "dz_switchlight": {
                 "method": "switchlight"
             },
-                   }  
+            "dz_heatingcontrol": {
+                "method": "heatingcontrol"
+            }
+                  }  
 	             },
-        "widgets": {
-            "getTime": "lisa.plugins.Domoticz.web.views.widget1"
+         "widgets": {
+            "switchlight": "lisa.plugins.Domoticz.web.views.switchlight"
         },
-    "cle_u" : [
+    "param_dz" : [
 	    {
 	        "ids" : "bureau_un_off", 
 		"meth" : "switchlight",
@@ -91,5 +94,3 @@
 	  }
 	     ]
 }
-
-    
