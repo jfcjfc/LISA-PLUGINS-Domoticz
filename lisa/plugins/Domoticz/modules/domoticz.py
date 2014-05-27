@@ -1,7 +1,6 @@
 # -*- coding: UTF-8 -*-
 #
-# V0.3 - 140523h1730
-#
+# V0.153
 # manque scenario et panel securité
 # manque devices -temp, batterie, humidité
 # doit marcher et a tester on/off - switch et HC 
