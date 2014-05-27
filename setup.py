@@ -20,7 +20,7 @@ if __name__ == '__main__':
         namespace_packages=['lisa'],
         install_requires=listify('requirements.txt'),
         classifiers=[
-            'Development Status :: 0.12 - Beta',
+            'Development Status :: 0.153 - Beta',
             'Environment :: Console',
             'License :: OSI Approved :: MIT License',
             'Operating System :: POSIX',
