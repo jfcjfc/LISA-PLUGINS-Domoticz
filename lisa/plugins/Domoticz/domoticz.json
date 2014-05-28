@@ -5,7 +5,7 @@
     "enabled": 1,
     "pypi-url": "https://pypi.python.org/pypi/lisa-plugin-Domoticz",
     "github-url": "https://XXXraw.githubusercontent.com/Seraf/LISA-PLUGINS-Domoticz/master/lisa/plugins/Domoticz/domoticz.json",
-    "version": "0.153",
+    "version": "0.154",
     "description": [
         {
             "lang": "fr",
