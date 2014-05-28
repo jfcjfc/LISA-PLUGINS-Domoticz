@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 #
-# V0.153
+# V0.154
 # manque scenario et panel securité
 # manque devices -temp, batterie, humidité
 # doit marcher et a tester on/off - switch et HC 
@@ -44,9 +44,9 @@ class Domoticz(IPlugin):
 #
 		idex= location + "_" + on_off
 		for rs in res1:
-		if rs['ids'] == idex :
-			rss = rs
-			bod = rss(boy)
+			if rs['ids'] == idex :
+				rss = rs
+				bod = rss(boy)
 		#	http://192.168.0.3:8080/json.htm?type=devices&filter=temp&rid=74
 		# parse result : Temp	
 		return {"plugin": "Domoticz",
@@ -72,9 +72,9 @@ class Domoticz(IPlugin):
 #
 		idex= location + "_" + on_off
 		for rs in res1:
-		if rs['ids'] == idex :
-			rss = rs
-		bod = rss(boy)
+			if rs['ids'] == idex :
+				rss = rs
+				bod = rss(boy)
 		resp = requests.get ('http://192.168.0.3:8080/json.htm?type=command&param=switchlight&idx=%02d&switchcmd=%s&level=0' % (rss[idx],on_off.capitalize()))
 		return {"plugin": "Domoticz",
 			"method": "switchlight",
