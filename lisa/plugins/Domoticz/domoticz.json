@@ -9,12 +9,12 @@
     "description": [
         {
             "lang": "fr",
-            "description": "Ce plugin est celui par défaut intégrant les interactions basiques avec LISA",
+            "description": "Ce plugin est celui par défaut intégrant les interactions basiques de Domoticz avec LISA",
             "wit-instance": "https://wit.ai/jfcjfc/Dz1"
         },
         {
             "lang": "en",
-            "description": "This plugin is shipped by default, managing all basic interactions with LISA",
+            "description": "This plugin is shipped by default, managing all basic interactions of Domoticz with LISA",
             "wit-instance": "https://wit.ai/jfcjfc/Dz1"
         }
     ],
