@@ -11,7 +11,7 @@ if __name__ == '__main__':
         version=metadata['version'],
         name='lisa-plugin-Domoticz',
         packages=["lisa.plugins"],
-        url='http://www.lisa-project.net',
+        url='http://github.com/jfcjfc/LISA-PLUGINS-Domoticz',
         license='MIT',
         author='jfcjfc',
         author_email='',
